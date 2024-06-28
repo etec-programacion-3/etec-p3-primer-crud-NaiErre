@@ -1,3 +1,40 @@
-GET http://127.0.0.1:3000/books/ HTTP/1.1
+# Obtener todos los libros
+GET http://localhost:3000/books HTTP/1.1
 
-GET http://127.0.0.1:3000/books/1 HTTP/1.1
+###
+
+# Obtener un libro por ID
+GET http://localhost:3000/books/1 HTTP/1.1
+
+###
+
+# Crear un nuevo libro
+POST http://localhost:3000/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Cien Años de Soledad",
+  "author": "Gabriel Garcia Marquez",
+  "isbn": "978-3-16-148410-0",
+  "publisher": "Penguin Random House",
+  "pages": 417
+}
+
+###
+
+# Actualizar un libro existente por ID
+PUT http://localhost:3000/books/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Cien Años de Soledad - Actualizado",
+  "author": "Gabriel Garcia Marquez",
+  "isbn": "978-3-16-148410-0",
+  "publisher": "Penguin Random House",
+  "pages": 420
+}
+
+###
+
+# Eliminar un libro por ID
+DELETE http://localhost:3000/books/1 HTTP/1.1
