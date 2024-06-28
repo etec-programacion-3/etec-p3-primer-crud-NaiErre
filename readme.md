@@ -23,7 +23,7 @@ Instala las dependencias necesarias utilizando npm:
 
 ```sh
 npm install
-
+```
 
 
 ### 3. Configuración de la Base de Datos
